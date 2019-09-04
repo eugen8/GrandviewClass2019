@@ -17,6 +17,22 @@ Depending on your text editor registered when you installed github, you might ha
 
 A quick intro to VIM is here: https://www.tutorialspoint.com/vim/vim_getting_familiar.htm 
 
+***
+Now you should have the pdf file with what your html should look like in the browser. The txt file has the text I used, but no html of any kind. 
+Your job is to update lesson2.html to look just like the pdf in the browser. Small differences are fine, also not too particular about the text, as long as you practice with the html tags. 
+
+There are no styles in this document. 
+
+
+
+__Hints:__ 
+
+For images use width and alt attributes : https://www.w3schools.com/html/html_images.asp. 
+For the table use cellpadding, border and cellspacing attributes. Even though they're deprectated in HTML5 you'll still encouter them in older html. Later we'll use styling. 
+
+Make the labels on checkboxes and radio buttons clickable. Read about labels at: https://www.w3schools.com/tags/tag_label.asp
+
+To be able to see < > in your browser read about html entities: https://www.w3schools.com/html/html_entities.asp 
 
 
 
