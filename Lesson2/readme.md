@@ -1,25 +1,27 @@
 # Lesson 2 follow-up
 
-In the folder you will find two images, a pdf file with an image of what you need to implemnt as HTML and the text I used.
+In this folder you will find two images, a pdf file with an image of what you need to implemnt as HTML and the text I used.
 
 First let's get the changes I made in this repository into your own fork:
 
 Go to your GrandviewClass2019 folder
-Pull the parent branch into your local repository, you might need resolve any merge conflicts. 
+Pull the parent branch into your local repository, you might need to resolve any merge conflicts. 
 ``` 
 git pull https://github.com/eugen8/GrandviewClass2019 master
 
 ```
 For more details and commands keep reading. 
 
-This will create a folder called Lesson2
+This should create a folder called Lesson2
 Depending on your text editor registered when you installed github, you might have "VIM" or "EMACS" style editor. 
 
 A quick intro to VIM is here: https://www.tutorialspoint.com/vim/vim_getting_familiar.htm 
+If everything fails, you can copy/paste the Lesson2 folder and in class we'll figure out the issue. Give it a really good try though.
+
 
 ***
-Now you should have the pdf file with what your html should look like in the browser. The txt file has the text I used, but no html of any kind. 
-Your job is to update lesson2.html to look just like the pdf in the browser. Small differences are fine, also not too particular about the text, as long as you practice with the html tags. 
+Now you should have the pdf file showing you what the final result should look like in the browser. The txt file has the text I used, but no html of any kind. 
+Your job is to update lesson2.html to look just like the pdf in the browser. Small differences are fine, as long as you practice all those html tags. 
 
 There are no styles in this document. 
 
