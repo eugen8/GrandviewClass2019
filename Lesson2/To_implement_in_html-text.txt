@@ -1,0 +1,65 @@
+Class
+Grandview
+2019
+Lesson 2
+Paragraphs are denoted with <p> tags. This is a paragraph.
+
+Now write something bold, strong, emphasized, strikethrough or maybe subscript or superscript?
+
+We can quote something using blockquote tag and footer (search e.g. "blockquote mozilla")
+
+I don't make things difficult. That's the way they get, all by themselves.
+
+Martin Riggs (Lethal Weapon)
+Unlinke I was under the impression earlier
+    pre element     preserves the     spaces!
+It does not preserve > or < html tags
+<div> tags denote blocks - they usually start at the beginning of the line and go up to the end of the line
+These two images shold be inside one div tag
+
+  
+Moview Quotes in tables
+Please use thead, tbody, tr, th, td tags here!
+
+Quote (please use thead and th)	Movie
+After all, tomorrow is another day!	Gone With the Wind, 1939
+Do or do not. There is no try	Star Wars
+Below is a form
+Use the form tag with the elements that make the most sense
+
+Use <br/> for new line or put each label and input in a set of <p></p> tags
+
+
+use <label> tags for all the labels below
+Your name:  
+Your name here
+ 
+Password: 
+
+Email: 
+
+Which one do you prefer? (radio buttons) 
+make it such that when you click the label the radio button gets selected / this is a subscript 
+Star Wars  Star Trek
+
+Check all that applies (use <label for="..." to check the checkbox when clicking on label)
+
+ <!DOCTYPE html> is at the beginning of the page
+
+ <!DOCTYPE html> is at the end of the page
+
+Comments (80 columns and 15 rows):
+
+ 
+Links
+This should take you to https://www.w3schools.com/html page 
+This should take you to https://www.w3schools.com/html/html_links.asp but open in a new page/tab.
+Add some lists here
+An Unordered List
+Star Wars
+Star Track
+Mary Poppins
+An Ordered List
+Chocolate
+Candies
+Juice
