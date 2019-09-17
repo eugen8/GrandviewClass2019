@@ -3,13 +3,12 @@
 # Content
 
 ## PHP
-php basics and connection to server: echo, syntax, types, loops, objects, inheritance, string funtions, $_GET, $_POST, $_REQUEST; Reading material, connecting to mysql
+php basics and connection to server.
+phpinfo()
+Setting up an DNS A record to your server's IP address.
+PHP: syntax, echo, types, loops, objects, inheritance, string funtions, $_GET, $_POST, $_REQUEST; etc.
 
-
-
-CSS and HTML -> https://www.w3schools.com/css/css_pseudo_classes.asp
-                units: rem, em, px, cm
-				https://www.w3schools.com/css/css_pseudo_elements.asp
+We'll try to go over https://www.w3schools.com/php all the way to forms
 
 
 
@@ -20,7 +19,30 @@ you can read more on version control integration: https://code.visualstudio.com/
 Othe extensions:
 PHP Debug
 PHP IntelliSense
-To install PHP with debugging in your local using XAMP
+To install PHP with debugging in your local using XAMPP
+
+If you install XAMPP locally, your root directory will be: 
+`C:\xampp\htdocs`
+You can change it to something else if you edit htdocs.conf: 
+* On XAMPP control panel click Config button for Apache.
+* Choose Apache(httpd.conf).  
+* find the line DocumentRoot "C:/xampp/htdocs"  and replace this and next line with something like this:
+ Before: 
+```
+DocumentRoot "C:/xampp/htdocs"
+<Directory "C:/xampp/htdocs">
+```
+After:
+```
+#DocumentRoot "C:/xampp/htdocs"
+#<Directory "C:/xampp/htdocs">
+DocumentRoot "C:/Users/Eugen-hp/Desktop/grandview/GrandviewClass2019"
+<Directory "C:/Users/Eugen-hp/Desktop/grandview/GrandviewClass2019">
+```
+Now when you access `http://localhost` your files will be serverd out of the same directory where your GrandviewClass2019 folder is. You can access e.g. lesson6 index.php just like this:
+http://localhost/Lesson6/index.php
+
+
 
 Practice: 
 * https://www.w3schools.com/php/default.asp  from HOME and Intro all through Form Complete
