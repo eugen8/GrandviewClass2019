@@ -27,7 +27,8 @@ You can change it to something else if you edit htdocs.conf:
 * On XAMPP control panel click Config button for Apache.
 * Choose Apache(httpd.conf).  
 * find the line DocumentRoot "C:/xampp/htdocs"  and replace this and next line with something like this:
- Before: 
+
+Before: 
 ```
 DocumentRoot "C:/xampp/htdocs"
 <Directory "C:/xampp/htdocs">
