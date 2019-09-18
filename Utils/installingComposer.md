@@ -13,6 +13,11 @@ php --version
 composer --version  
 mysql --version  
 
+To test the waters, let's install a library called Guzzle. It can be a great helper for consuming REST-full web services:   
+`composer require guzzlehttp/guzzle`  
+You can read a tutorial on how to use it here:  https://hackernoon.com/creating-rest-api-in-php-using-guzzle-d6a890499b02
+
+
 
 When composer downloads dependent libraries it will create a composer.json file to store the dependencies and also a vendor folder with all third party libraries. You normally don't want to commit ./vendor content to you repo, so add the vendor/ folder to .gitignore. If you don't have .gitignore file create already, go to the root of your repo and run: `touch .gitignore`. 
 Add the following in the .gitignore file:
