@@ -1,5 +1,7 @@
 #Ignore folder vendor
 vendor/
 
+.vscode/
+
 #ignore composer.lock
 composer.lock
