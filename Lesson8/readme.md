@@ -113,6 +113,10 @@ What this does is comments out to only allow access from IP 127.0.0.1 (localhost
 7) Restart your apache server with the command:  
 ```sudo /opt/bitnami/ctlscript.sh restart apache```
 
+8) Go back to the URL/phpmyadmin and see your application load. Enter login root and password - retrieve it from doing `cat ~/bitnami_application_password`. 
+9) Congratulate yourself, now you can see your database on Lightsail, add/remove tables, run queries. 
+
+
 #### Create a DB table
 
 #### Update a DB table
