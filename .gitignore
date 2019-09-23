@@ -5,3 +5,5 @@ vendor/
 
 #ignore composer.lock
 composer.lock
+
+**/credentials.php
