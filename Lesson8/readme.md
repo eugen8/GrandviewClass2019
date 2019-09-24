@@ -61,14 +61,13 @@ e.g.: 'jetpack' === substr( $_GET['page'], 0, 7 )
 IndexOf:
 if( xhr.responseText.indexOf('wp_error') !== -1 ) {return; }
 
-### What is an exception:
+### Dates
 
-### Working with files: upload, read, write
+### Useful String functions 
 
-### handling cookies and headers
+### Objects in PHP
 
-
-### PHP Filters
+### Working with exceptions
 
 ### Connecting to the database
 
@@ -118,51 +117,66 @@ What this does is comments out to only allow access from IP 127.0.0.1 (localhost
 
 
 #### Create a DB table
+_before we get started create a file credentials.php and add it to .gitignore: `**/credentials.php`_
+Put the following content in credentials.php:
+```<?php
+
+define('DBHOST','localhost');
+define('DBPORT','');
+define('DBUSER','gwclassuser');
+define('DBUSERPASSWORD','');
+```
+
+Connect and create tables
+
+MySQLi is the MySQL improved extension. You can use it in object oriented or procedural way. 
+PDO stands for Php Data Objects and will work on 12 different database systems, whereas MySQLi will only work with MySQL databases.
+
+To be consistent between your localhost and your lightsail instance for DB connections create a user that will have access to only one schema. If you create e.g. schema Lesson8 then select the Lesson8 in phpMyAdmin, go to Privileges and Add User Accou t.  Do something like this: username:gwclassuser , for passowrd click on generate to get a unique hard(impossible) to guess password. Copy the password in your DBUSERPASSWORD definition, e.g. `define('DBUSERPASSWORD','yourVeryHardToGuessPassword');`  
+You can selet either "Grant all privileges on database lesson8" if you have a DB schema called lesson8, or you can create another schema.  
+For Global Privileges select all Data and Structure for simplicity, and click Go.
+Also note the hosts: You must have both localhost and % for each user. Only then you can log-in locally AND from other hosts or client programs.  This is why root has multiple entries in User Accounts tab in phpMyAdmin.
+
+
+Now you should be able to connect to your schema. Head over to the database.php for the example. 
 
 #### Update a DB table
 
 Select, Insert, Update
 View table information
 
+Read about sql injection and security: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
+Read more about working with your database from php at: https://www.w3schools.com/php/php_mysql_intro.asp
 
 
 
-### Ajax and responding to the browser
+### API Integration with Mailchimp
+First go to Mailchimp and create an account.   
+Then create an API key: go to your Account, then choose Extras > API Keys and Create A Key. 
+Copy this key and add define a constant in your credentials:   
+`define("MAILCHIMP_APIKEY_DEFAULT","your_api_key");`  
+Next go to Audience tab and click on Manage Audiences > Settings
+Copy the Unique id for audience _your_audience_name_ and add the constant in your credentials.php file  
+`define ('MAILCHIMP_AUDIENCE_ID','your_list_id');`   
+
+Once you have the key you can start invoking the API. Head to add_contact.php for the examples.   
+Learn more from Mailchimp documentation: 
+ * https://mailchimp.com/developer/       
+ * https://mailchimp.com/developer/guides/get-started-with-mailchimp-api-3/
+ * https://mailchimp.com/developer/guides/an-introduction-to-rest/
+ * https://mailchimp.com/developer/reference/lists/list-members/ - this is what we'll mainly be doing, adding members
+ * https://mailchimp.com/developer/reference/lists/ 
+ * https://mailchimp.com/help/all-the-merge-tags-cheat-sheet/
+ 
 
 
 
 
 
 
-## Javascript
-Going deep into JavaScript syntax 
-    syntax
-    reserved words
-    types
-    operators
-    conditional and loops
-    string library and operators
-    functions, variables, globals
-    objects and classes
-    arrays
-    RegExJava
-    JavaScript DOM
-    Ajax 
-    Single page applications (SPA)
-    Event propagation
-    DOM Update
-    jQuery
-
-Homework/practice:
-
-Watch: JavaScript: The Good Parts
-https://www.youtube.com/watch?v=hQVTIJBZook
 
 
-CSS and HTML -> https://www.w3schools.com/css/css_pseudo_classes.asp
-                units: rem, em, px, cm
-				https://www.w3schools.com/css/css_pseudo_elements.asp
 
 
-Practice: 
+
 
