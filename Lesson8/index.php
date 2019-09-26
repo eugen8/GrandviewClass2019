@@ -26,7 +26,10 @@
 
 
 
+
 <div>
+
+
 <p> Walkthrough isset and empty on arrays </p>
     <?php
     $A=array();
@@ -34,6 +37,16 @@
     $A["yourphone"]="";
     $A["youremail"]="   ";
     $A["yourdata"] = "  I say hello   ";
+
+echo "<pre> test somethi";
+
+
+echo '\''.!empty($A['yourdata']).'\'';
+
+echo "</pre>";
+
+
+
     echo 'isset: '.isset($A['yourname']).", ".isset($A['yourphone']).", ".isset($A['youremail']).", ".isset($A['yourdata'])."<br/>";
     echo 'isset of somethingelse: '.isset($A['somethingelse'])."<br/>";
     echo 'empty: '.empty($A['yourname']).", ".empty($A['yourphone']).", ".empty($A['youremail']).", ".empty($A['yourdata'])."<br/>";
@@ -51,7 +64,7 @@
         echo "<br/>\n";
     }
     function nl(){
-        echo "\n";
+        echo "\n" ;
     }
 
     if(isset($_GET['yourname'])){
@@ -123,7 +136,7 @@ y - year in two digits (08 or 14)
 Y - year in four digits (2008 or 2014)
 */
 br();
-echo "The time is: ".date('h:i:s a');
+echo "The time is: ".date('h:i:s A');
 /*
 h - hour in 12-hour format with leading zeros (01 to 12)
 H - hour in in 24-hour format with leading zeros (00 to 23)
@@ -151,7 +164,7 @@ nl();
 echo " but php1 and php: ".strcasecmp('php1','php');
 echo "  or php and php1: ".strcasecmp("php", "php1");
 nl();
-echo "strcmp: ". strcmp("stringOne", "stringone");
+echo "strcmp: ". strcmp("stringone", "stringOne");
 nl();
 echo "length of hello is ".strlen('hello');
 nl();
@@ -166,7 +179,11 @@ echo str_pad($cities[2], 20, "_", STR_PAD_BOTH); nl();
 
 
 $citiArray = explode(",","New York, London, Athenes,Chisinau");
+echo "<pre>";
 print_r($citiArray);
+echo "<pre>";
+var_dump($citiArray);
+
 nl();
 
 /* join or implode: */

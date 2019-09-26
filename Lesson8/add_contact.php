@@ -4,31 +4,34 @@
     <title>Adding contact with Mailchimp</title>
 </head>
 <body>
-    
-<form action="">
-    <p><input type="text" name="fname" id="fnameInput" placeholder="First Name"></p>
-    <p><input type="text" name="lname" id="lnameInput" placeholder="Last Name"></p>
-    <p><input type="text" name="email" id="emailInput" placeholder="Email"></p>
-    <p><input type="Submit" name="submitContact" id="" ></p>
-</form>
 
-<div id="add_contact_result" style="background-color: green; text-color:red; font-weight:bold;"></div>
 
+  
 
 <?php
 
 
 include_once('credentials.php');
 
+$fname=$lname=$email="";
+if(isset($_POST['submitContact'])){
+    $fname =  htmlentities($_POST['fname']);
+    $lname =  htmlentities($_POST['lname']);
+    $email = htmlentities($_POST['email']);
+    echo "we are in the form submission!";
+    $data = [
+        'email'     => $email,
+        'status'    => 'subscribed',
+        'firstname' => $fname,
+        'lastname'  =>$lname
+    ];
+    
+    syncMailchimp($data);
+    
+}
 
-$data = [
-    'email'     => 'eugen8@gmail.com',
-    'status'    => 'subscribed',
-    'firstname' => 'Eugen',
-    'lastname'  => 'Burianov'
-];
 
-syncMailchimp($data);
+
 
 
 
@@ -58,9 +61,11 @@ function syncMailchimp($data) {
     ]);
 
     $httpCode = null;
-    printRequestInfo($url, $json);
-    // $httpCode = executeRequest($url, $json); echo("<pre>Result: ");print_r($httpCode);echo("</pre>");
-    
+    // printRequestInfo($url, $json);
+    $httpCode = executeRequest($url, $json); echo("<pre>Result: ");print_r($httpCode);echo("</pre>");
+        
+    echo "request was executed, returned code:";
+    var_dump ($httpCode);
 
 
     return $httpCode;
@@ -96,6 +101,17 @@ function syncMailchimp($data) {
 }
 
 ?>
+
+
+  
+<form action="" method="POST" > 
+    <p><input type="text" name="fname" id="fnameInput" placeholder="First Name" value="<?php echo $fname ?>"></p>
+    <p><input type="text" name="lname" id="lnameInput" placeholder="Last Name" value="<?php echo $lname ?>"></p>
+    <p><input type="text" name="email" id="emailInput" placeholder="Email" value="<?php echo $email ?>"></p>
+    <p><input type="Submit" name="submitContact" id="" ></p>
+</form>
+
+<div id="add_contact_result" style="background-color: green; text-color:red; font-weight:bold;"></div>
 
 
 

@@ -28,7 +28,7 @@ mysqli_close($conn);
 $conn = new mysqli(DBHOST, DBUSER, DBUSERPASSWORD, "lesson8");
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_eorror);
 }
 echo "Object Oriented: Connected successfully<br/>\n";
 $conn->close();
@@ -58,6 +58,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+exit(0);
 
 ?>
 
@@ -83,6 +84,36 @@ if(isset($_POST['createTable'])){
 }
 
 ?>
+<p>Test queries</p>
+<form action="" method="POST">
+    <p><input type="text" name="book_name" id=""></p>
+    <input type="hidden" name="currentForm" value="testQueryForm">
+    <p><button type="submit" name="testMyCoolQuery" style="background-color:#832229;">Test query</button></p>
+</form>
+
+<div style="background-color:yellow;">
+<?php
+if(isset($_POST['currentForm']) && $_POST['currentForm']==='testQueryForm' ){
+    $bookname= $_POST['book_name'];
+    
+    $bookname = "Mobi Dick";
+    // THIS IS BAD! DANGEROUS! NEVER WRITE QUERIES THIS WAY!
+    // This allows your users to execute sql injection attacks: 
+    //  https://www.php.net/manual/en/security.database.sql-injection.php
+    //  https://en.wikipedia.org/wiki/SQL_injection
+    $result = $conn -> query("select * from inventory where bookname='$bookname' ");
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $id = $row['id'];               $title = $row['bookname'];
+            $available = $row['available']; $added = $row['date_added'];
+            echo "<p>[$id] $title - $available items available. Added on: $added </p>";
+        }
+    }
+}
+?>
+</div>
+
 <p>Add books to inventory (prepared statement)</p>
 <form action="" method="POST">
     <p><input type="text" name="bookname" placeholder="Book Name"></p>
@@ -96,6 +127,7 @@ if(isset($_POST['addBook'])){
     $title = htmlspecialchars($_POST['bookname']);
     $available = htmlspecialchars($_POST['available']);
     // prepare and bind
+
     $stmt = $conn->prepare("INSERT INTO Inventory (bookname,  available, date_added) VALUES (?, ?, CURDATE() )");
     $stmt->bind_param("si", $title, $available);
     $stmt->execute();
@@ -149,7 +181,7 @@ echo "closing the connection";
 $conn->close();
 ?>
 
-
+<div>Hello</div>
 
 </body>
 </html>
