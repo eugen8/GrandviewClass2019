@@ -1,14 +1,15 @@
 # Lesson 10  
-___10/03/2019___
+___10/01/2019___
 
 
-# Recap on PHP and Javascript
-# Homework Review
-# Homework Due
+## PHP Working with files:
 
+## File uploads
 
-# CSS Tricks
-CSS and HTML -> https://www.w3schools.com/css/css_pseudo_classes.asp
-                units: rem, em, px, cm
-				https://www.w3schools.com/css/css_pseudo_elements.asp
+## File reading/writing"
 
+### PHP Filters
+
+### Handling cookies and headers
+
+### PHP Session
