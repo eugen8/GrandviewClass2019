@@ -26,14 +26,17 @@ if(strcasecmp('POST', $_SERVER['REQUEST_METHOD']) == 0){
     $how_with_string_utilities = "";
     if(isset($_POST['how_hear'])){
         $how2 = $_POST['how_hear'];
-        echo"<br/>\n".htmlentities($how2);
-        echo"<br/>\n".htmlspecialchars($how2);
+        echo"<br/>\n htmlentities".htmlentities($how2);
+        echo"<br/>\n htmlspecialchars".htmlspecialchars($how2);
+        echo "<br/>\n strip_tags: ".strip_tags($how2);
         echo "<br/>\n".filter_var($_POST['how_hear'], FILTER_SANITIZE_SPECIAL_CHARS);
         echo "<br/>\n".filter_var($_POST['how_hear'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         echo "<br/>\n".filter_var($_POST['how_hear'], FILTER_SANITIZE_STRING);
         echo "<br/>\n".filter_var($_POST['how_hear'], FILTER_SANITIZE_STRIPPED);
         echo "<br/>\n URL: ".filter_var($_POST['how_hear'].'http://hello.com?alfa=one and one + 3', FILTER_SANITIZE_URL);
         echo "\n <br/>";
+        // entities: https://www.freeformatter.com/html-entities.html
+        
 
     }
     
