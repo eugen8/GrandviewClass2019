@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="quiz5.css"/>
+    <style>
+        body{
+          padding: 10px;  
+        } 
+        
+      
+    </style>
+
+<!-- the size of this box (width by height)should be 600px by 300px 
+ it should be separated by 40px at the top and bottom, the box should also be centered 
+ colors: background is #cdf5bb
+ the content inside the box should be padded 20px from the top and bottom, 5px from right and 10px from left.
+ the borders sizes are 3px except the bottom one that is 5px.  
+-->
+
+    <div class="content-box">
+        <!-- the heading font is Arial, Helvetica, sans-serif 
+            the text color is rgb(90, 4, 4)
+            also the font size is a little bit larger, it should be 3 times larger than the current font size (hint: remember em units) -->
+        <h1>Content One</h1>
+        <!-- hint to correctly style this: you'll need to position this button absolutely in relation to the content-box. 
+        Position it with minus some negative number of pixels from corresponding sides.
+        It also has a red border and a coral background.
+    -->
+        <div class="close-button" style="border-radius: 4px; cursor: pointer;">X</div>
+        <!-- 
+            this special text below should not display. An extra point if you also make it not take any space in the content-box.
+        -->
+        <div class="special-text">This is a special text and it should NOT display</div>
+        <!-- the blockquote below will display normally, no need to add any special style on it -->
+        <blockquote>Responsive Web Design is about using HTML and CSS to automatically resize a website.
+                Responsive Web Design is about making a website look good on all devices (desktops, tablets, and phones).
+                When making responsive web pages, add the following &lt;meta&gt; element to all your web pages
+                <p>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+            <cite>Source: <a href="https://www.w3schools.com/whatis/whatis_responsive.asp">w3school</a></cite>
+            </blockquote>
+    </div>
+
+    <p>To display the X close button we used a div with <span style="color:darkgoldenrod">class="close-button"</span>
+    but it's styling should only apply if it is inside content-box. For example the X below should look like a plain X:
+    </p>
+    <!-- Your style should not affect this X below-->
+    <div class="close-button">X</div>
+    <!-- This text below should bold and it SHOULD DISPLAY!-->
+    <div class="special-text">This is a special text and it SHOULD display</div>
+
+</body>
+</html>
