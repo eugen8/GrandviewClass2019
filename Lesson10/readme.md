@@ -130,7 +130,7 @@ https://www.w3schools.com/js/js_htmldom.asp
 
 
 ### Ajax and responding to the browser
-
+Will go over an example: add_contact_ajax.php vs add_contact.php 
 
 
 ## Javascript
@@ -150,13 +150,31 @@ Going deep into JavaScript syntax
     Single page applications (SPA)
     Event propagation
     DOM Update
-    jQuery
-
-Homework/practice:
+    jQuery - what is it and how it's less necessary with query selectors: https://www.w3schools.com/jsref/met_document_queryselector.asp
 
 
-Watch: JavaScript: The Good Parts
-https://www.youtube.com/watch?v=hQVTIJBZook
+Greate reading: https://css-tricks.com/multi-million-dollar-html/  
+
+## Homework/practice
+Create a page that that has four javascript questions. The answer options will be:
+Question 1: input box (i.e. `<input type="text">`)
+Question 2: Single select question - will have 4 select radio buttons
+Question 3: Multiple choice question: 4 checkboxes
+Question 5: Multiple choice questions but with a select box i.e. `<select> <option>...</option> ... </select>` with --select-- by default, and 4 options to select. This will also allow multiple selections! 
+
+Use javascript to validate the answer. Once the user clicks Submit below the form display the result, something like this:
+Question 1: you entered: ..., correct answer ...
+Question 2: ...
+Your total score: 1 point. 
+(possible scores are 1, 2,3,4 points, a point for each question).
+
+The submit button becomes enabled ONLY after the user fills in all the possible questions. 
+
+Successfully completting this homework will add points to your quiz result. 
+
+---
+
+
 
 
 
