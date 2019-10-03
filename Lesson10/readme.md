@@ -1,5 +1,5 @@
-# Lesson 9  
-___9/26/2019___
+# Lesson 10  
+___10/01/2019___
 
 
 
@@ -51,6 +51,8 @@ var city = {
     neighboringCities: ['West Des Moines', 'Urbandale', 'Plesant Hill'],
     foundedYear: 1851
 }
+
+
 ECMAScript standard defines seven data types that are primitives: 
 * Boolean 
 * Null 

@@ -1,6 +1,6 @@
 
 # Lesson 13  
-___10/03/2019___
+___10/10/2019___
 
 NOTE: this class is going to be held at Gravitate location downtown. 
 
