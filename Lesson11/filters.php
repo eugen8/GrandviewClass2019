@@ -38,8 +38,18 @@ if(strcasecmp('POST', $_SERVER['REQUEST_METHOD']) == 0){
         // entities: https://www.freeformatter.com/html-entities.html
         
 
+
+        echo "You said Dog on position: ";
+        echo filter_var($_POST['how_hear'], FILTER_CALLBACK, array('options'=>'filter1') );
+
+        
+
     }
-    
+  
+    function filter1($str){
+        return strpos($str, 'dog');
+    }
+
     echo "<br/>How hear: $how";
     echo "<br/>How unsafe hear: $howUnsafe";
     
