@@ -2,6 +2,15 @@
 ___10/03/2019___
 
 
+## File uploads
+
+## File reading/writing"
+
+### Handling cookies and headers
+
+### PHP Session
+
+
 # Recap on PHP and Javascript
 # Homework Review
 # Homework Due

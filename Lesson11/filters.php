@@ -39,16 +39,24 @@ if(strcasecmp('POST', $_SERVER['REQUEST_METHOD']) == 0){
         
 
 
-        echo "You said Dog on position: ";
-        echo filter_var($_POST['how_hear'], FILTER_CALLBACK, array('options'=>'filter1') );
+     
+        
+
+
+        // callback validate filter
+
+
 
         
 
     }
   
-    function filter1($str){
-        return strpos($str, 'dog');
-    }
+function filter1($str){
+    return strpos($str, 'dog');
+}
+$replacedString = filter_var($_POST['how_hear'], FILTER_CALLBACK, array('options' => 'filter1'));
+echo "<br/>You said dog at position: ".$replacedString;
+
 
     echo "<br/>How hear: $how";
     echo "<br/>How unsafe hear: $howUnsafe";
