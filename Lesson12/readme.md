@@ -1,6 +1,12 @@
-# Lesson 10  
-___10/03/2019___
+# Lesson 12  
+___10/08/2019___
 
+
+Standup
+Quiz/Homework/midterm questions
+Homework 1 issues, questions, reviews. Lightsail view.
+Trello and books swap project discussion.
+Gravitate meeting discussion. 
 
 ## File uploads
 https://www.w3schools.com/php/php_file_upload.asp
