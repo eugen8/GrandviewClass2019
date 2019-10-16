@@ -10,4 +10,4 @@ tmp/
 
 **/credentials.php
 
-.node_modules
+node_modules/
