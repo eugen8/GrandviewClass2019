@@ -9,3 +9,5 @@ composer.lock
 tmp/
 
 **/credentials.php
+
+.node_modules
