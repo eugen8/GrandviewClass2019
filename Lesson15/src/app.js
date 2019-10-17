@@ -16,12 +16,9 @@ function getResponseFromMailchimp(api_id){
 }
 
 //a function that simmulates rolling a die
-
-
-
-
-// Export node module.
-if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') )
-{
-    module.exports = {'addTwoNumbers':addTwoNumbers, 'handleMailchimpResponse':handleMailchimpResponse };
+function rollDice(){
+    var result = Math.floor(Math.random()*6)+1;
+    return result;
 }
+
+

@@ -1,5 +1,4 @@
 
-
 describe('Testing App.js for math operations', function(){
 
     it(" should return sum of numbers when I pass two integers", function(){
@@ -25,4 +24,20 @@ describe('Rolling Dice ', function(){
 
 
   });
+
+  
+  it('Should give different numbers if ran multiple times', function(){
+    var result;
+    var arrayOfNumbers = [0,0,0,0,0,0];
+    for(var i = 0; i<100; i++){
+      result = rollDice();
+      arrayOfNumbers[result-1]=1;
+    }
+   
+    expect(arrayOfNumbers.toString()).toBe('1,1,1,1,1,1')
+
+  });
+
+
+
 });
